@@ -1,0 +1,60 @@
+
+
+.hero {
+   
+    min-height: 90vh;
+    background-image: url('../assets/glowing-spaceship-orbits-planet-starry-galaxy-generated-by-ai.jpg');
+/* opacity: 95%; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color:#ffffff;
+    background-size: cover;
+    /* animation: carouselAnimation 30s infinite; */
+}
+
+ 
+
+.cus_color{
+    color: #FCC31E;
+}
+
+/* hero text reveal-slide in */
+@keyframes slideIn {
+    0% {
+        transform: translate(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero_text {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    animation: slideIn 2s backwards;
+}
+
+.start_btn{
+    border: 2px solid #1168ff ;
+    background-color:#1168ff ;
+    color: azure;
+}
+.start_btn:hover{
+    color: #0B2E29;
+    background-color: #ffea01;
+}
+
+
+
+
+
+
+
+
+
+

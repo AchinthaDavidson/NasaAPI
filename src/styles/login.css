@@ -1,0 +1,16 @@
+/* *,
+*::before,
+*::after {
+	box-sizing: border-box;
+} */
+.login {
+	min-height: 100vh;
+
+	font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+	background-position: center center;
+	/* background-color: black; */
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('../assets/background.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
