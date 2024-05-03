@@ -1,10 +1,8 @@
 import { useState } from 'react';
 import "../../styles/login.css"
 import Swal from 'sweetalert2';
-import { app, storage, auth, firestore } from '../../firebaseConfig';
+import {  auth} from '../../firebaseConfig';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { getDatabase, onValue, ref } from 'firebase/database';
-import { collection, doc, getDocs, query, setDoc, where } from 'firebase/firestore';
 
 
 function Login(params) {
