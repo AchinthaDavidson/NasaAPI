@@ -6,8 +6,10 @@ function Home() {
     <div>
       <div className="hero">
         <div class="d-grid gap-2 d-md-flex justify-content-md-end  me-3">
-        <Link className='btn btn-link' to="/gallery"><div className='mt-4 me-4 fs-5'>Image Gallery</div></Link>
-          <a class="btn btn-primary mt-4" href="/" role="button">Log Out</a>
+        <Link className='btn btn-link text-light ' to="/app/gallery"><div className='mt-4 me-4 fs-5'>Image Gallery</div></Link>
+        <Link className='btn btn-link text-light' to="/app/mars"><div className='mt-4 me-4 fs-5'>Mars Rover Photos</div></Link>
+   
+          <a class="btn btn-primary mt-4" href="/ " role="button">Log Out</a>
         </div>
 
         <div className="hero_text col-8 pt-5">

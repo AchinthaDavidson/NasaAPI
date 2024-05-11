@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import "../../styles/login.css"
 import Swal from 'sweetalert2';
-import {  auth} from '../../firebaseConfig';
+import {auth} from '../../firebaseConfig';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { useNavigate } from 'react-router';
 
 
 function Login(params) {
@@ -13,7 +14,7 @@ function Login(params) {
     const [password, setPassword] = useState();
     const [cpassword, setCpassword] = useState();
     const [name, setName] = useState();
-
+    const navigate = useNavigate();
     const toggleLogin = () => {
         setLogin((prev) => !prev);
     };
@@ -37,7 +38,9 @@ function Login(params) {
                 const user = userCredential.user;
                 await console.log(user.email)
                 if (user) {
-                    window.location.href = "/home";
+                    localStorage.setItem("user",user.email)
+                    // window.location.href = "/app/home";
+                    navigate('/app/home');
                 }
                 else {
                     Swal.fire('Error', 'login error', 'error');
@@ -55,7 +58,8 @@ function Login(params) {
                 if (user) {
                     Swal.fire('Success', 'user add successfully', 'success');
                     await sessionStorage.setItem("user", email);
-                    window.location.href = "/home";
+                    // window.location.href = "app/home";
+                    navigate('/app/home');
                 }
                 else {
                     Swal.fire('Error', 'Error signing up', 'error');
